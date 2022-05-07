@@ -1,7 +1,7 @@
 curl -L https://global.download.synology.com/download/DSM/release/7.1/42621-1/DSM_DS920%2B_42621.pat -o ds.pat
 mkdir synoesp
 curl --location https://global.download.synology.com/download/DSM/release/7.0.1/42218/DSM_DS3622xs%2B_42218.pat --output oldpat.tar.gz
-tar -C./synoesp/ -xzf oldpat.tar.gz rd.gz
+tar -C./synoesp/ -xf oldpat.tar.gz rd.gz
 cd synoesp
 xz -dc < rd.gz >rd 2>/dev/null || echo "extract rd.gz"
 echo "finish"
